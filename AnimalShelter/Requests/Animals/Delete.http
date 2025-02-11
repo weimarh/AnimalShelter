@@ -1,0 +1,4 @@
+@host=http://localhost:5083
+
+DELETE  {{host}}/animals/f41dbb24-9b69-43a5-8c03-be22fc34668f
+Content-Type: application/json

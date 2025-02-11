@@ -1,0 +1,15 @@
+@host=http://localhost:5083
+
+POST {{host}}/adopters
+Content-Type: application/json
+
+{
+  "firstName": "Hermilene",
+  "lastName": "Sanchez",
+  "phoneNumber": "70725926",
+  "country": "Bolivia",
+  "city": "Cochabamba",
+  "street": "Casto Rojas",
+  "houseNumber": 1433,
+  "email": "shermilene@hotmail.com"
+}

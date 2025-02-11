@@ -1,0 +1,17 @@
+@host=http://localhost:5083
+
+POST {{host}}/animals
+Content-Type: application/json
+
+{
+  "name": "Satuca",
+  "species": "Dog",
+  "breed": "Mixed",
+  "sex": "Female",
+  "color": "Black and brown",
+  "description": "Smart",
+  "intakeDate": "2025-02-06T14:47:16.426Z",
+  "availabilityStatus": "Dead",
+  "medicalHistory": "Sterilized",
+  "specialNeeds": "Much love"
+}

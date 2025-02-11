@@ -1,0 +1,18 @@
+@host=http://localhost:5083
+
+PUT {{host}}/animals/84216cc6-5236-4e67-b89d-a6dd55ed93ea
+Content-Type: application/json
+
+{
+    "id": "84216cc6-5236-4e67-b89d-a6dd55ed93ea",
+    "name": "Satuca",
+    "species": "Dog",
+    "breed": "Mixed",
+    "sex": "Female",
+    "color": "Black and Brown",
+    "description": "Smart",
+    "intakeDate": "2025-02-06T14:47:16Z", 
+    "availabilityStatus": "Dead",
+    "medicalHistory": "Sterilized",
+    "specialNeeds": "Much love"
+}
