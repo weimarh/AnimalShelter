@@ -1,7 +1,6 @@
 using Application.Animals.Create;
 using Domain.Animals;
 using Domain.Primitives;
-using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace Application.Animals.UnitTests.AnimalTests.Create;
 

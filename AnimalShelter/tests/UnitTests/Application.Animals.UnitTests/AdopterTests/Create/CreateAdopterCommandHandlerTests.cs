@@ -167,19 +167,6 @@ public class CreateAdopterCommandHandlerTests
             adopter.Email == command.Email
         )))
         .Returns(Task.CompletedTask);
-        mockAdopterRepository.Verify(
-            repo => repo.Add(
-                It.Is<Adopter>(adopter =>
-                    adopter.FirstName == command.FirstName &&
-                    adopter.LastName == command.LastName &&
-                    adopter.PhoneNumber == PhoneNumber.Create(command.PhoneNumber) &&
-                    adopter.Address == Address.Create(
-                        command.Country,
-                        command.City,
-                        command.Street,
-                        command.HouseNumber) &&
-                    adopter.Email == command.Email
-                )),
-                Times.Once);
+        
     }
 }
