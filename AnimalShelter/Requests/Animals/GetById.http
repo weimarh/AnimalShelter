@@ -1,3 +1,3 @@
 @host=http://localhost:5083
 
-Get {{host}}/animals/f41dbb24-9b69-43a5-8c03-be22fc34668f
+Get {{host}}/animals/d4cadadb-0205-4ab4-ab8c-521c05c04fc0

@@ -1,0 +1,10 @@
+@host=http://localhost:5083
+
+POST {{host}}/adoptions
+Content-Type: application/json
+
+{
+  "animalId": "d4cadadb-0205-4ab4-ab8c-521c05c04f",
+  "adopterId": "76c26943-1bd8-4bfd-afdb-f8f38d2fd410",
+  "adoptionDate": "2025-02-21T16:46:55.549Z"
+}

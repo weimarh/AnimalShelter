@@ -147,22 +147,23 @@ public class CreateAdoptionCommandHandlerTests
             Address.Create("Test", "Test", "Test", 179),
             "Test");
 
+        mockAnimalRepository.Setup(repo => repo.ExistsAsync(new AnimalId(animal.Id.Id)))	
+                .ReturnsAsync(true);
+
+        mockAdopterRepository.Setup(repo => repo.ExistsAsync(new AdopterId(adopter.Id.Id)))	
+                .ReturnsAsync(true);
 
         CreateAdoptionCommand command = new CreateAdoptionCommand(
-            animal.Id.ToString(),
-            adopter.Id.ToString(),
+            animal.Id.Id.ToString(),
+            adopter.Id.Id.ToString(),
             new DateTimeOffset());
         
-        mockAnimalRepository.Setup(repo => repo.ExistsAsync(new AnimalId(Guid.NewGuid())))
-                .ReturnsAsync(true);
         
         //Act
         var result = await handler.Handle(command, default);
 
         //Assert
         result.IsError.Should().BeFalse();
-        result.FirstError.Type.Should().Be(ErrorType.Validation);
-        result.FirstError.Code.Should().Be(Errors.Adoption.EmptyAnimalId.Code);
-        result.FirstError.Description.Should().Be(Errors.Adoption.EmptyAnimalId.Description);
+        result.Value.Should().BeOfType<Unit>();
     }
 }
