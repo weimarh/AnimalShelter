@@ -6,12 +6,12 @@ using MediatR;
 
 namespace Application.Adoptions.GetById;
 
-public class GetAdopterByIdQueryHandler :
+public class GetAdoptionByIdQueryHandler :
     IRequestHandler<GetAdoptionByIdQuery, ErrorOr<AdoptionResponse>>
 {
     private readonly IAdoptionRepository _adoptionRepository;
 
-    public GetAdopterByIdQueryHandler(IAdoptionRepository adoptionRepository)
+    public GetAdoptionByIdQueryHandler(IAdoptionRepository adoptionRepository)
     {
         _adoptionRepository = adoptionRepository ?? throw new ArgumentNullException(nameof(adoptionRepository));
     }
